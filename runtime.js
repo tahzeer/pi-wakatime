@@ -181,7 +181,7 @@ function getOnce(url) {
     port: target.port ? Number.parseInt(target.port, 10) : isHttps ? 443 : 80,
     path: `${target.pathname}${target.search}`,
     method: 'GET',
-    headers: { 'User-Agent': 'github.com/wakatime/pi-wakatime' },
+    headers: { 'User-Agent': 'github.com/tahzeer/pi-wakatime' },
   };
   if (isHttps) options.rejectUnauthorized = getSetting('settings', 'no_ssl_verify') !== 'true';
 
@@ -385,7 +385,7 @@ export function createRuntime(deps = dependencies(), hostProduct = 'pi') {
     const run = queue.then(async () => {
       const cli = await deps.ensureWakatimeCli();
       if (!version) version = await getPiVersion();
-      const plugin = `${hostProduct}/${version || 'unknown'} pi-wakatime/${VERSION}`;
+      const plugin = `${hostProduct}/${version || 'unknown'} pi-agent-wakatime/${VERSION}`;
 
       const args = ['--sync-ai-activity', '--plugin', plugin];
       if (directory) args.push('--project-folder', directory);

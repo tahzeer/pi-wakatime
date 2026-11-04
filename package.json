@@ -1,5 +1,5 @@
 {
-  "name": "pi-wakatime",
+  "name": "pi-agent-wakatime",
   "version": "0.1.0",
   "description": "Community WakaTime plugin for the Pi coding agent: Track your Pi AI coding activity with WakaTime",
   "type": "module",
@@ -18,10 +18,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wakatime/pi-wakatime.git"
+    "url": "git+https://github.com/tahzeer/pi-wakatime.git"
   },
   "keywords": [
     "pi",
+    "pi-agent",
     "pi-coding-agent",
     "wakatime",
     "time-tracking",
@@ -29,5 +30,5 @@
   ],
   "author": "WakaTime community",
   "license": "BSD-3-Clause",
-  "homepage": "https://github.com/wakatime/pi-wakatime#readme"
+  "homepage": "https://github.com/tahzeer/pi-wakatime#readme"
 }
