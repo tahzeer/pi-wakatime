@@ -1,0 +1,33 @@
+{
+  "name": "pi-wakatime",
+  "version": "0.1.0",
+  "description": "Community WakaTime plugin for the Pi coding agent: Track your Pi AI coding activity with WakaTime",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./runtime": "./runtime.js"
+  },
+  "pi": {
+    "extensions": [
+      "index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "node --check runtime.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wakatime/pi-wakatime.git"
+  },
+  "keywords": [
+    "pi",
+    "pi-coding-agent",
+    "wakatime",
+    "time-tracking",
+    "ai"
+  ],
+  "author": "WakaTime community",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/wakatime/pi-wakatime#readme"
+}
