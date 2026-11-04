@@ -6,6 +6,8 @@ Track AI coding time, tokens, and prompt activity while using the `pi` TUI, `pi 
 
 > **Not affiliated with Pi's authors or WakaTime.** Unofficial community plugin, awaiting review at wakatime.com.
 
+> npm package note: the GitHub repo is `tahzeer/pi-wakatime`; the npm package is **`pi-agent-wakatime`**. The plain `pi-wakatime` npm package is a separate community plugin by ttttmr.
+
 ## What it does
 
 - Installs / updates [wakatime-cli](https://github.com/wakatime/wakatime-cli) under `~/.wakatime/` (official GitHub releases only)
@@ -29,8 +31,8 @@ Get a key at [wakatime.com/api-key](https://wakatime.com/api-key).
 ## Install
 
 ```sh
-pi install npm:pi-wakatime          # once published
-pi install git:github.com/wakatime/pi-wakatime   # straight from git
+pi install npm:pi-agent-wakatime      # npm package (after first release)
+pi install git:github.com/tahzeer/pi-wakatime   # straight from this repo
 # or from a local checkout:
 pi install ./pi-wakatime
 ```

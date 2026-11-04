@@ -68,7 +68,7 @@ test('isFileTool recognizes write tools', () => {
 });
 
 test('createRuntime builds the sync-ai-activity command and serializes runs', async (t) => {
-  const home = mkdtempSync(path.join(tmpdir(), 'pi-wakatime-'));
+  const home = mkdtempSync(path.join(tmpdir(), 'pi-agent-wakatime-'));
   const previous = process.env.WAKATIME_HOME;
   process.env.WAKATIME_HOME = home;
   t.after(() => {
@@ -91,7 +91,7 @@ test('createRuntime builds the sync-ai-activity command and serializes runs', as
   await Promise.all([runtime.sync('/a'), runtime.sync('/b')]);
 
   assert.equal(calls.length, 2);
-  assert.equal(calls[0].args[0], '--sync-ai-activity');
-  assert.ok(calls[0].args.find((value) => value.startsWith('pi/')));
-  assert.ok(calls[0].args.includes('--plugin'));
+  assert.ok(calls[0].args[0] === '--sync-ai-activity');
+  const pluginArgument = calls[0].args[calls[0].args.indexOf('--plugin') + 1];
+  assert.match(pluginArgument, /^pi\/\S+ pi-agent-wakatime\/\S+$/);
 });
