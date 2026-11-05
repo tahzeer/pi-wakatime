@@ -1,6 +1,6 @@
 {
   "name": "pi-agent-wakatime",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Community WakaTime plugin for the Pi coding agent: Track your Pi AI coding activity with WakaTime",
   "type": "module",
   "exports": {
